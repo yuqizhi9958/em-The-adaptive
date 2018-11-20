@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 5rem;
+            height: 5rem;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+        }
+        .main {
+            width: 2rem;
+            height: 2rem;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        这是父盒子
+        <div class="main">
+            
+        </div>
+
+    </div>
+    <div class="box">
+            这是父盒子
+            <div class="main">
+            </div>
+    
+        </div>
+        <div class="box">
+                这是父盒子
+                <div class="main">
+                </div>
+        
+            </div>
+            <div class="box">
+                    这是父盒子
+                    <div class="main">
+                    </div>
+            
+                </div>
+                <div class="box">
+                        这是父盒子
+                        <div class="main">
+                        </div>
+                
+                    </div>
+                    <div class="box">
+                            这是父盒子
+                            <div class="main">
+                            </div>
+                    
+                        </div>
+</body>
+<script>
+         //  获取视窗可视宽度
+         let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            console.log(htmlWidth);
+            
+            //    获取视窗可视高度
+            let htmlDom = document.getElementsByTagName('html')[0];
+            console.log(htmlDom);
+            
+            //  这里除以10方便计算，不要除以太离谱的数值，比如200，浏览器无法识别这么小的值
+            //  这里htmlDom计算出的值，相当于给html设置font-size
+            htmlDom.style.fontSize = htmlWidth / 10 + 'px';
+</script>
+</html>
